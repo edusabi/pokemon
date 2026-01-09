@@ -24,9 +24,8 @@ const Home = () => {
 
   const handleLoginSuccess = async () => {
     try {
-      // 🔥 busca usuário usando JWT do cookie
       const { data } = await axios.get(
-        "http://localhost:3000/users/me",
+        "https://pokeverse.discloud.app/users/me",
         { withCredentials: true }
       );
 
