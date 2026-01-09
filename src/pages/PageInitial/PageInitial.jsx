@@ -1,7 +1,7 @@
 const PageInitial = () => {
   return (
     <div>
-        <h1>PageInitial</h1>
+        <h1>Em breve</h1>
     </div>
   )
 }

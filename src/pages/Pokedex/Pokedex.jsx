@@ -1,7 +1,7 @@
 const Pokedex = () => {
   return (
     <div>
-        <h1>Página não feita</h1>
+        <h1>Em breve</h1>
     </div>
   )
 }
