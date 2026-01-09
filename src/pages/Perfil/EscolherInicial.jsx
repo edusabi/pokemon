@@ -17,6 +17,14 @@ const EscolherInicial = ({ onSelect, onClose }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
+  useEffect(() => {
     const loadStarters = async () => {
       const promises = STARTER_IDS.map(async (id) => {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
