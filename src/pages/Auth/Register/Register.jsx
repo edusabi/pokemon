@@ -39,7 +39,7 @@ const Register = ({ onSuccess }) => {
     try {
       setLoading(true);
 
-      await axios.post("https://pokeverse-rho.vercel.app/users/register", {
+      await axios.post("https://pokeverse.discloud.app/users/register", {
         email,
         cpf,
         password,
