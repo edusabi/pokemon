@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("https://pokeverse.discloud.app/me", {
+        const res = await axios.get("https://pokeverse.discloud.app/users/me", {
           withCredentials: true,
         });
         setUser(res.data.user);
