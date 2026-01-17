@@ -6,6 +6,10 @@ import axios from "axios";
 import Home from "./pages/Home/Home";
 import PageInitial from "./pages/PageInitial/PageInitial";
 import Perfil from "./pages/Perfil/Perfil";
+import SistemaTipos from "./pages/SistemaTipos/SistemaTipos";
+import TrocaPokemon from "./pages/TrocaPokemon/TrocaPokemon";
+import LojaItens from "./pages/LojaItens/LojaItens";
+import MissoesDiarias from "./pages/MissoesDiarias/MissoesDiarias";
 
 // components
 import Navbar from "./components/Navbar/Navbar";
@@ -57,6 +61,42 @@ function App() {
           element={
             <ProtectedRoute user={user} loading={loadingUser}>
               <PageInitial />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/trocas"
+          element={
+            <ProtectedRoute user={user} loading={loadingUser}>
+              <TrocaPokemon />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/lojas"
+          element={
+            <ProtectedRoute user={user} loading={loadingUser}>
+              <LojaItens />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/missoes"
+          element={
+            <ProtectedRoute user={user} loading={loadingUser}>
+              <MissoesDiarias />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/tipos"
+          element={
+            <ProtectedRoute user={user} loading={loadingUser}>
+              <SistemaTipos />
             </ProtectedRoute>
           }
         />
