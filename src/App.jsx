@@ -75,7 +75,7 @@ function App() {
         />
 
         <Route
-          path="/lojas"
+          path="/loja"
           element={
             <ProtectedRoute user={user} loading={loadingUser}>
               <LojaItens />
