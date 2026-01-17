@@ -14,6 +14,7 @@ import MissoesDiarias from "./pages/MissoesDiarias/MissoesDiarias";
 // components
 import Navbar from "./components/Navbar/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import RouteLoader from "./components/RouteLoader";
 
 axios.defaults.withCredentials = true;
 
@@ -40,8 +41,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar user={user} loading={loadingUser} />
+      <RouteLoader>
 
+      <Navbar user={user} loading={loadingUser} />
+      
       <Routes>
         {/* HOME */}
         <Route
@@ -110,6 +113,7 @@ function App() {
           }
         />
       </Routes>
+      </RouteLoader>
     </BrowserRouter>
   );
 }

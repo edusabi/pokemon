@@ -1,0 +1,95 @@
+.loaderContainer {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #0b0f1a, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* 🌌 Estrelas */
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 80% 40%, #fff, transparent),
+    radial-gradient(1px 1px at 50% 70%, #fff, transparent),
+    radial-gradient(1px 1px at 30% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 70% 20%, #fff, transparent);
+  animation: starsMove 12s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes starsMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+/* 🔥 Conteúdo central */
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ⚡ Logo animada */
+.logo {
+  width: 160px;
+  filter: drop-shadow(0 0 20px #ffcc00);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px #ffcc00);
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 32px #ff4444);
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px #ffcc00);
+  }
+}
+
+/* 📝 Texto */
+.text {
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* 📱 Responsivo */
+@media (max-width: 600px) {
+  .logo {
+    width: 120px;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}
