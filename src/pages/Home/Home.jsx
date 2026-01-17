@@ -32,6 +32,7 @@ const Home = ({ onLoginSuccess }) => {
       <div className={styles.card}>
         <div className={styles.info}>
           <h2>{isLogin ? "Bem-vindo de volta" : "Crie sua conta"}</h2>
+          <p> {isLogin ? "Entre com seus dados para continuar no PokeVerse." : "Registre-se e comece sua jornada como treinador."} </p>
 
           <button onClick={() => setIsLogin(!isLogin)}>
             {isLogin ? "Criar conta" : "Já tenho conta"}
